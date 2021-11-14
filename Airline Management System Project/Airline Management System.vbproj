@@ -122,6 +122,9 @@
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="home_user.resx">
+      <DependentUpon>home_user.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login Page.resx">
       <DependentUpon>Login Page.vb</DependentUpon>
     </EmbeddedResource>
