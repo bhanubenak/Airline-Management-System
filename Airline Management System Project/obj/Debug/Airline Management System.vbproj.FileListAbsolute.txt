@@ -3,12 +3,22 @@ C:\Users\Admin\source\repos\Airline Management System Project\Airline Management
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\bin\Debug\Airline Management System Project.pdb
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\bin\Debug\Airline Management System Project.xml
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System.vbproj.AssemblyReference.cache
-C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.home.resources
-C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Login_Page.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Resources.resources
-C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.register_page.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System.vbproj.GenerateResource.cache
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System.vbproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System Project.exe
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System Project.xml
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline Management System Project.pdb
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.home_user.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.add_flight_admin.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Cancel_flight_user.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.home_admin.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.reservation_user.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Reserve_page.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Login_Page.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.About_Us.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.test.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.feedback_form.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.print_ticket.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.refund_user.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.view_feedback_admin.resources

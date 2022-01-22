@@ -73,69 +73,256 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Forms\About_Us.Designer.vb">
+      <DependentUpon>About_Us.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\About_Us.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\add_flight_admin.Designer.vb">
+      <DependentUpon>add_flight_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\add_flight_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\view_feedback_admin.Designer.vb">
+      <DependentUpon>view_feedback_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\view_feedback_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="arsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>arsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="home.Designer.vb">
-      <DependentUpon>home.vb</DependentUpon>
-    </Compile>
-    <Compile Include="home.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="home_user.Designer.vb">
-      <DependentUpon>home_user.vb</DependentUpon>
-    </Compile>
-    <Compile Include="home_user.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login Page.Designer.vb">
-      <DependentUpon>Login Page.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login Page.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
+    <Compile Include="ARSDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet13.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet14.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet15.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet16.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet17.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet18.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet19.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARSDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARSDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FlightNameSelection.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightNameSelection.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="source_selection.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source_selection.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Cancel_flight_user.Designer.vb">
+      <DependentUpon>Cancel_flight_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Cancel_flight_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\home_admin.Designer.vb">
+      <DependentUpon>home_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\home_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\feedback_form.Designer.vb">
+      <DependentUpon>feedback_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\feedback_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\home_user.Designer.vb">
+      <DependentUpon>home_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\home_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Login Page.Designer.vb">
+      <DependentUpon>Login Page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Login Page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="register_page.Designer.vb">
-      <DependentUpon>register_page.vb</DependentUpon>
+    <Compile Include="User Forms\print_ticket.Designer.vb">
+      <DependentUpon>print_ticket.vb</DependentUpon>
     </Compile>
-    <Compile Include="register_page.vb">
+    <Compile Include="User Forms\print_ticket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\refund_user.Designer.vb">
+      <DependentUpon>refund_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\refund_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\Reserve_page.Designer.vb">
+      <DependentUpon>Reserve_page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\Reserve_page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\reservation_user.Designer.vb">
+      <DependentUpon>reservation_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\reservation_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Forms\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Forms\test.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="home.resx">
-      <DependentUpon>home.vb</DependentUpon>
+    <EmbeddedResource Include="Admin Forms\About_Us.resx">
+      <DependentUpon>About_Us.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home_user.resx">
+    <EmbeddedResource Include="Admin Forms\add_flight_admin.resx">
+      <DependentUpon>add_flight_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\view_feedback_admin.resx">
+      <DependentUpon>view_feedback_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Cancel_flight_user.resx">
+      <DependentUpon>Cancel_flight_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\home_admin.resx">
+      <DependentUpon>home_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\feedback_form.resx">
+      <DependentUpon>feedback_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\home_user.resx">
       <DependentUpon>home_user.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Page.resx">
+    <EmbeddedResource Include="User Forms\Login Page.resx">
       <DependentUpon>Login Page.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="register_page.resx">
-      <DependentUpon>register_page.vb</DependentUpon>
+    <EmbeddedResource Include="User Forms\print_ticket.resx">
+      <DependentUpon>print_ticket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\refund_user.resx">
+      <DependentUpon>refund_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\Reserve_page.resx">
+      <DependentUpon>Reserve_page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\reservation_user.resx">
+      <DependentUpon>reservation_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Forms\test.resx">
+      <DependentUpon>test.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +337,226 @@
     <None Include="arsDataSet.xss">
       <DependentUpon>arsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ARSDataSet1.xsc">
+      <DependentUpon>ARSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet1.xss">
+      <DependentUpon>ARSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet10.xsc">
+      <DependentUpon>ARSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet10.xss">
+      <DependentUpon>ARSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet11.xsc">
+      <DependentUpon>ARSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet11.xss">
+      <DependentUpon>ARSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet12.xsc">
+      <DependentUpon>ARSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet12.xss">
+      <DependentUpon>ARSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet13.xsc">
+      <DependentUpon>ARSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet13.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet13.xss">
+      <DependentUpon>ARSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet14.xsc">
+      <DependentUpon>ARSDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet14.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet14.xss">
+      <DependentUpon>ARSDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet15.xsc">
+      <DependentUpon>ARSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet15.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet15.xss">
+      <DependentUpon>ARSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet16.xsc">
+      <DependentUpon>ARSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet16.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet16.xss">
+      <DependentUpon>ARSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet17.xsc">
+      <DependentUpon>ARSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet17.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet17.xss">
+      <DependentUpon>ARSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet18.xsc">
+      <DependentUpon>ARSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet18.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet18.xss">
+      <DependentUpon>ARSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet19.xsc">
+      <DependentUpon>ARSDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet19.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet19.xss">
+      <DependentUpon>ARSDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet2.xsc">
+      <DependentUpon>ARSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet2.xss">
+      <DependentUpon>ARSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet3.xsc">
+      <DependentUpon>ARSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet3.xss">
+      <DependentUpon>ARSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet4.xsc">
+      <DependentUpon>ARSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet4.xss">
+      <DependentUpon>ARSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet5.xsc">
+      <DependentUpon>ARSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet5.xss">
+      <DependentUpon>ARSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet6.xsc">
+      <DependentUpon>ARSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet6.xss">
+      <DependentUpon>ARSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet7.xsc">
+      <DependentUpon>ARSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet7.xss">
+      <DependentUpon>ARSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet8.xsc">
+      <DependentUpon>ARSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet8.xss">
+      <DependentUpon>ARSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet9.xsc">
+      <DependentUpon>ARSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ARSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARSDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ARSDataSet9.xss">
+      <DependentUpon>ARSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FlightNameSelection.xsc">
+      <DependentUpon>FlightNameSelection.xsd</DependentUpon>
+    </None>
+    <None Include="FlightNameSelection.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightNameSelection.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlightNameSelection.xss">
+      <DependentUpon>FlightNameSelection.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -160,6 +567,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="source_selection.xsc">
+      <DependentUpon>source_selection.xsd</DependentUpon>
+    </None>
+    <None Include="source_selection.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>source_selection.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="source_selection.xss">
+      <DependentUpon>source_selection.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close-window.png" />
@@ -189,7 +607,7 @@
     <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home screen image.4jpg.jpg" />
+    <None Include="Resources\home screen image.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login_or_register pic.jpg" />
@@ -229,6 +647,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-maximize-window-32 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home screen image.4jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home screen image3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-photo-dark-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\background img.jpg" />
+    <None Include="Resources\close.png" />
+    <Content Include="Resources\home screen image1.jpg" />
+    <Content Include="Resources\home screen image2.jpg" />
+    <Content Include="Resources\home screen image5.jpg" />
+    <Content Include="Resources\image.jpg" />
+    <None Include="Resources\image1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
