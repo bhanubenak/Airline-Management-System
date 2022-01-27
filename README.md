@@ -1,4 +1,4 @@
-# Airline-Management-System
+# Airline-Reservation-System
 
 This is my Mini-Project
 
