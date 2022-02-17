@@ -3,7 +3,6 @@
 Public Class Cancel_flight_user
     ReadOnly conn As New SqlConnection("Data Source=(localdb)\ProjectsV13;Initial Catalog=ARS;Integrated Security=True")
 
-
     Private Sub close_btn_Click(sender As Object, e As EventArgs) Handles close_btn.Click
         Close()
     End Sub
@@ -55,8 +54,6 @@ Public Class Cancel_flight_user
         If pnr_btn_cancel.Text = Nothing Then
             MsgBox("Enter Your PNR Number", MsgBoxStyle.Exclamation)
         Else
-
-
             conn.Open()
 
             Try
@@ -107,12 +104,7 @@ Public Class Cancel_flight_user
         ElseIf pnr_btn_cancel.Text.Length = 6 Then
             Try
                 conn.Open()
-                Dim cmd1 As New SqlCommand("SELECT 
-                                                                                                pnr_no
-                                                                              FROM 
-                                                                                                ars_reserve 
-                                                                              WHERE 
-                                                                                                pnr_no='" + pnr_btn_cancel.Text + "'", conn)
+                Dim cmd1 As New SqlCommand("SELECT pnr_no FROM ars_reserve  WHERE pnr_no='" + pnr_btn_cancel.Text + "'", conn)
 
                 Dim pnr As String
                 Dim pnr_text As String
@@ -144,15 +136,10 @@ Public Class Cancel_flight_user
             End Try
         End If
 
-
         Try
             'deleting the booked Ticket
             conn.Open()
-            Dim cmd As New SqlCommand("DELETE 
-                                                                                        FROM 
-                                                                                                      ars_reserve 
-                                                                                        WHERE 
-                                                                                                       pnr_no='" + pnr_btn_cancel.Text + "' ", conn)
+            Dim cmd As New SqlCommand("DELETE FROM ars_reserve WHERE pnr_no='" + pnr_btn_cancel.Text + "' ", conn)
             If cmd.ExecuteNonQuery() Then
                 Dim dt1 As String = fli_date_cancel.Text
 
