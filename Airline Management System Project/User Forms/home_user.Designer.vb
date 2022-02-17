@@ -55,7 +55,7 @@ Partial Class home_user
         Me.can_ticket = New System.Windows.Forms.Button()
         Me.reservation = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.history_DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -67,12 +67,13 @@ Partial Class home_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.UserDisplay)
@@ -104,6 +105,7 @@ Partial Class home_user
         Me.Label4.Size = New System.Drawing.Size(97, 23)
         Me.Label4.TabIndex = 144
         Me.Label4.Text = "UserName:"
+        Me.Label4.Visible = False
         '
         'UserDisplay
         '
@@ -170,9 +172,10 @@ Partial Class home_user
         Me.pnr_no.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnr_no.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold)
         Me.pnr_no.ForeColor = System.Drawing.Color.Black
-        Me.pnr_no.Location = New System.Drawing.Point(960, 305)
+        Me.pnr_no.Location = New System.Drawing.Point(1134, 366)
         Me.pnr_no.Multiline = False
         Me.pnr_no.Name = "pnr_no"
+        Me.pnr_no.ReadOnly = True
         Me.pnr_no.Size = New System.Drawing.Size(223, 42)
         Me.pnr_no.TabIndex = 121
         Me.pnr_no.Text = ""
@@ -183,7 +186,7 @@ Partial Class home_user
         Me.pnr_label.AutoSize = True
         Me.pnr_label.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnr_label.ForeColor = System.Drawing.Color.Black
-        Me.pnr_label.Location = New System.Drawing.Point(856, 314)
+        Me.pnr_label.Location = New System.Drawing.Point(1030, 375)
         Me.pnr_label.Name = "pnr_label"
         Me.pnr_label.Size = New System.Drawing.Size(98, 25)
         Me.pnr_label.TabIndex = 120
@@ -250,7 +253,7 @@ Partial Class home_user
         '
         'min_btn
         '
-        Me.min_btn.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.min_btn.BackColor = System.Drawing.Color.Transparent
         Me.min_btn.BackgroundImage = CType(resources.GetObject("min_btn.BackgroundImage"), System.Drawing.Image)
         Me.min_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.min_btn.FlatAppearance.BorderSize = 0
@@ -265,7 +268,7 @@ Partial Class home_user
         '
         'close_btn
         '
-        Me.close_btn.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.close_btn.BackColor = System.Drawing.Color.Transparent
         Me.close_btn.BackgroundImage = CType(resources.GetObject("close_btn.BackgroundImage"), System.Drawing.Image)
         Me.close_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.close_btn.FlatAppearance.BorderSize = 0
@@ -280,7 +283,7 @@ Partial Class home_user
         '
         'max_btn
         '
-        Me.max_btn.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.max_btn.BackColor = System.Drawing.Color.Transparent
         Me.max_btn.BackgroundImage = CType(resources.GetObject("max_btn.BackgroundImage"), System.Drawing.Image)
         Me.max_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.max_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black
@@ -296,7 +299,6 @@ Partial Class home_user
         '
         'Panel2
         '
-        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.min_btn)
         Me.Panel2.Controls.Add(Me.close_btn)
@@ -309,7 +311,6 @@ Partial Class home_user
         '
         'Panel11
         '
-        Me.Panel11.BackgroundImage = CType(resources.GetObject("Panel11.BackgroundImage"), System.Drawing.Image)
         Me.Panel11.Controls.Add(Me.PictureBox7)
         Me.Panel11.Controls.Add(Me.feeback_btn)
         Me.Panel11.Controls.Add(Me.PictureBox5)
@@ -493,25 +494,25 @@ Partial Class home_user
         '
         'Panel15
         '
-        Me.Panel15.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.Panel15.Controls.Add(Me.PictureBox6)
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.Panel15.Controls.Add(Me.PictureBox8)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(218, 174)
         Me.Panel15.TabIndex = 1
         '
-        'PictureBox6
+        'PictureBox8
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(0, -1)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(218, 182)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 67
-        Me.PictureBox6.TabStop = False
+        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(17, 7)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(185, 160)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 187
+        Me.PictureBox8.TabStop = False
         '
         'home_user
         '
@@ -539,7 +540,7 @@ Partial Class home_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel15.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -572,9 +573,9 @@ Partial Class home_user
     Friend WithEvents Label6 As Label
     Friend WithEvents date_now_label As Label
     Friend WithEvents time_now_label As Label
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents feeback_btn As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents UserDisplay As Label
+    Friend WithEvents PictureBox8 As PictureBox
 End Class

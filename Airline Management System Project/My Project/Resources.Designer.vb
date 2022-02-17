@@ -71,6 +71,50 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property itextsharp() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("itextsharp", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property itextsharp_5_5_0() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("itextsharp_5_5_0", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        '''&lt;doc&gt;
+        '''    &lt;assembly&gt;
+        '''        &lt;name&gt;itextsharp&lt;/name&gt;
+        '''    &lt;/assembly&gt;
+        '''    &lt;members&gt;
+        '''        &lt;member name=&quot;T:System.util.collections.ReadOnlyDictionary`2&quot;&gt;
+        '''            &lt;summary&gt;
+        '''            Provides the base class for a generic read-only dictionary.
+        '''            &lt;/summary&gt;
+        '''            &lt;typeparam name=&quot;TKey&quot;&gt;
+        '''            The type of keys in the dictionary.
+        '''            &lt;/typeparam&gt;
+        '''            &lt;typeparam name=&quot;TValue&quot;&gt;
+        '''            The type of values in the dictionary.
+        '''        [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property iTextSharp1() As String
+            Get
+                Return ResourceManager.GetString("iTextSharp1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property min() As System.Drawing.Bitmap

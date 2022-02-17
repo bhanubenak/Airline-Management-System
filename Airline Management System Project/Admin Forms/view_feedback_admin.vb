@@ -42,4 +42,29 @@ Public Class view_feedback_admin
             conn.Close()
         End Try
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        home_admin.Show()
+        Hide()
+    End Sub
+
+    Private Sub btn_flight_info_Click(sender As Object, e As EventArgs) Handles btn_flight_info.Click
+        add_flight_admin.Show()
+        Hide()
+    End Sub
+
+    Private Sub View_custo_btn_Click(sender As Object, e As EventArgs) Handles View_custo_btn.Click
+        home_admin.Show()
+        Me.Hide()
+        home_admin.load_date()
+        home_admin.load_date_user()
+        home_admin.UserData_admin.Visible = True
+        home_admin.Button5.Visible = True
+        home_admin.Label2.Visible = True
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Login_Page.Show()
+        Hide()
+    End Sub
 End Class

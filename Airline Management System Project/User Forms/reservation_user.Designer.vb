@@ -22,25 +22,18 @@ Partial Class reservation_user
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reservation_user))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ArsflightBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ARSDataSet10 = New Airline_Management_System_Project.ARSDataSet10()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ArsflightBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SourceSelection = New Airline_Management_System_Project.ARSDataSet19()
         Me.search_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Ars_flightTableAdapter = New Airline_Management_System_Project.ARSDataSet19TableAdapters.ars_flightTableAdapter()
-        Me.Ars_flightTableAdapter1 = New Airline_Management_System_Project.ARSDataSet10TableAdapters.ars_flightTableAdapter()
         Me.min_btn = New System.Windows.Forms.Button()
         Me.close_btn = New System.Windows.Forms.Button()
         Me.max_btn = New System.Windows.Forms.Button()
@@ -59,8 +52,10 @@ Partial Class reservation_user
         Me.can_ticket = New System.Windows.Forms.Button()
         Me.reservation = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.class_type = New System.Windows.Forms.ComboBox()
+        Me.class_type_label = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.date_now_label = New System.Windows.Forms.Label()
@@ -85,12 +80,9 @@ Partial Class reservation_user
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.gif_image = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ArsflightBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ARSDataSet10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ArsflightBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SourceSelection, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel11.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,13 +92,17 @@ Partial Class reservation_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.gif_image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.gif_image)
         Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -125,12 +121,15 @@ Partial Class reservation_user
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Maiandra GD", 23.25!, System.Drawing.FontStyle.Bold)
-        Me.RichTextBox1.Location = New System.Drawing.Point(123, 0)
+        Me.RichTextBox1.BackColor = System.Drawing.Color.SkyBlue
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Viner Hand ITC", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.RichTextBox1.Location = New System.Drawing.Point(236, 6)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(526, 98)
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(313, 90)
         Me.RichTextBox1.TabIndex = 94
-        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Reservation Page"
+        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & "Reservation Page"
         '
         'Label10
         '
@@ -160,16 +159,16 @@ Partial Class reservation_user
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.InactiveBorder
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DataGridView1.Location = New System.Drawing.Point(0, 443)
@@ -184,51 +183,31 @@ Partial Class reservation_user
         '
         'ComboBox2
         '
-        Me.ComboBox2.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ComboBox2.DataSource = Me.ArsflightBindingSource1
+        Me.ComboBox2.BackColor = System.Drawing.SystemColors.Window
         Me.ComboBox2.DisplayMember = "fli_desti"
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.Font = New System.Drawing.Font("Leelawadee UI Semilight", 9.75!)
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(404, 240)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(189, 29)
+        Me.ComboBox2.Size = New System.Drawing.Size(189, 25)
         Me.ComboBox2.TabIndex = 90
         Me.ComboBox2.ValueMember = "fli_desti"
-        '
-        'ArsflightBindingSource1
-        '
-        Me.ArsflightBindingSource1.DataMember = "ars_flight"
-        Me.ArsflightBindingSource1.DataSource = Me.ARSDataSet10
-        '
-        'ARSDataSet10
-        '
-        Me.ARSDataSet10.DataSetName = "ARSDataSet10"
-        Me.ARSDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ComboBox1.DataSource = Me.ArsflightBindingSource
         Me.ComboBox1.DisplayMember = "fli_source"
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.Font = New System.Drawing.Font("Leelawadee UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(81, 240)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(189, 29)
+        Me.ComboBox1.Size = New System.Drawing.Size(189, 25)
         Me.ComboBox1.TabIndex = 89
         Me.ComboBox1.ValueMember = "fli_source"
-        '
-        'ArsflightBindingSource
-        '
-        Me.ArsflightBindingSource.DataMember = "ars_flight"
-        Me.ArsflightBindingSource.DataSource = Me.SourceSelection
-        '
-        'SourceSelection
-        '
-        Me.SourceSelection.DataSetName = "SourceSelection"
-        Me.SourceSelection.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'search_btn
         '
@@ -270,17 +249,10 @@ Partial Class reservation_user
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Source"
         '
-        'Ars_flightTableAdapter
-        '
-        Me.Ars_flightTableAdapter.ClearBeforeFill = True
-        '
-        'Ars_flightTableAdapter1
-        '
-        Me.Ars_flightTableAdapter1.ClearBeforeFill = True
-        '
         'min_btn
         '
         Me.min_btn.BackgroundImage = CType(resources.GetObject("min_btn.BackgroundImage"), System.Drawing.Image)
+        Me.min_btn.FlatAppearance.BorderSize = 0
         Me.min_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.min_btn.Location = New System.Drawing.Point(1250, 3)
         Me.min_btn.Name = "min_btn"
@@ -291,6 +263,7 @@ Partial Class reservation_user
         'close_btn
         '
         Me.close_btn.BackgroundImage = CType(resources.GetObject("close_btn.BackgroundImage"), System.Drawing.Image)
+        Me.close_btn.FlatAppearance.BorderSize = 0
         Me.close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.close_btn.Location = New System.Drawing.Point(1334, 3)
         Me.close_btn.Name = "close_btn"
@@ -300,9 +273,10 @@ Partial Class reservation_user
         '
         'max_btn
         '
-        Me.max_btn.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.max_btn.BackColor = System.Drawing.Color.Transparent
         Me.max_btn.BackgroundImage = CType(resources.GetObject("max_btn.BackgroundImage"), System.Drawing.Image)
         Me.max_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.max_btn.FlatAppearance.BorderSize = 0
         Me.max_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.max_btn.Location = New System.Drawing.Point(1292, 3)
         Me.max_btn.Name = "max_btn"
@@ -312,7 +286,7 @@ Partial Class reservation_user
         '
         'Panel7
         '
-        Me.Panel7.BackgroundImage = CType(resources.GetObject("Panel7.BackgroundImage"), System.Drawing.Image)
+        Me.Panel7.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel7.Controls.Add(Me.min_btn)
         Me.Panel7.Controls.Add(Me.max_btn)
@@ -325,7 +299,7 @@ Partial Class reservation_user
         '
         'Panel11
         '
-        Me.Panel11.BackgroundImage = CType(resources.GetObject("Panel11.BackgroundImage"), System.Drawing.Image)
+        Me.Panel11.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel11.Controls.Add(Me.PictureBox7)
         Me.Panel11.Controls.Add(Me.feeback_btn)
         Me.Panel11.Controls.Add(Me.PictureBox5)
@@ -511,27 +485,30 @@ Partial Class reservation_user
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.Panel15.Controls.Add(Me.PictureBox6)
+        Me.Panel15.Controls.Add(Me.PictureBox8)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(218, 174)
         Me.Panel15.TabIndex = 1
         '
-        'PictureBox6
+        'PictureBox8
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(0, -7)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(218, 188)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 67
-        Me.PictureBox6.TabStop = False
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(12, 3)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(185, 160)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 185
+        Me.PictureBox8.TabStop = False
         '
         'Panel2
         '
+        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.class_type)
+        Me.Panel2.Controls.Add(Me.class_type_label)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.date_now_label)
@@ -562,6 +539,28 @@ Partial Class reservation_user
         Me.Panel2.Size = New System.Drawing.Size(427, 721)
         Me.Panel2.TabIndex = 188
         '
+        'class_type
+        '
+        Me.class_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.class_type.Font = New System.Drawing.Font("Leelawadee UI Semilight", 10.0!)
+        Me.class_type.FormattingEnabled = True
+        Me.class_type.Items.AddRange(New Object() {"Economy", "Premium Economy", "Business"})
+        Me.class_type.Location = New System.Drawing.Point(262, 371)
+        Me.class_type.Name = "class_type"
+        Me.class_type.Size = New System.Drawing.Size(141, 25)
+        Me.class_type.TabIndex = 164
+        '
+        'class_type_label
+        '
+        Me.class_type_label.AutoSize = True
+        Me.class_type_label.BackColor = System.Drawing.Color.Transparent
+        Me.class_type_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.class_type_label.Location = New System.Drawing.Point(212, 343)
+        Me.class_type_label.Name = "class_type_label"
+        Me.class_type_label.Size = New System.Drawing.Size(145, 23)
+        Me.class_type_label.TabIndex = 163
+        Me.class_type_label.Text = "Select Class Type"
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -591,7 +590,7 @@ Partial Class reservation_user
         Me.date_now_label.AutoSize = True
         Me.date_now_label.BackColor = System.Drawing.Color.Transparent
         Me.date_now_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.date_now_label.ForeColor = System.Drawing.Color.Coral
+        Me.date_now_label.ForeColor = System.Drawing.Color.Red
         Me.date_now_label.Location = New System.Drawing.Point(299, 31)
         Me.date_now_label.Name = "date_now_label"
         Me.date_now_label.Size = New System.Drawing.Size(104, 23)
@@ -603,7 +602,7 @@ Partial Class reservation_user
         Me.time_now_label.AutoSize = True
         Me.time_now_label.BackColor = System.Drawing.Color.Transparent
         Me.time_now_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.time_now_label.ForeColor = System.Drawing.Color.Coral
+        Me.time_now_label.ForeColor = System.Drawing.Color.Red
         Me.time_now_label.Location = New System.Drawing.Point(299, 63)
         Me.time_now_label.Name = "time_now_label"
         Me.time_now_label.Size = New System.Drawing.Size(112, 23)
@@ -651,14 +650,14 @@ Partial Class reservation_user
         Me.Panel6.BackColor = System.Drawing.Color.Black
         Me.Panel6.Location = New System.Drawing.Point(17, 202)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(178, 2)
+        Me.Panel6.Size = New System.Drawing.Size(178, 3)
         Me.Panel6.TabIndex = 157
         '
         'add_passenger
         '
         Me.add_passenger.BackColor = System.Drawing.Color.Peru
         Me.add_passenger.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.add_passenger.FlatAppearance.BorderSize = 2
+        Me.add_passenger.FlatAppearance.BorderSize = 0
         Me.add_passenger.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.add_passenger.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.add_passenger.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
@@ -697,9 +696,9 @@ Partial Class reservation_user
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.Location = New System.Drawing.Point(17, 275)
+        Me.Panel3.Location = New System.Drawing.Point(17, 276)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(178, 2)
+        Me.Panel3.Size = New System.Drawing.Size(178, 3)
         Me.Panel3.TabIndex = 142
         '
         'price
@@ -708,7 +707,7 @@ Partial Class reservation_user
         Me.price.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.price.Font = New System.Drawing.Font("Maiandra GD", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.price.Location = New System.Drawing.Point(18, 324)
+        Me.price.Location = New System.Drawing.Point(18, 322)
         Me.price.Name = "price"
         Me.price.ReadOnly = True
         Me.price.Size = New System.Drawing.Size(177, 21)
@@ -717,9 +716,9 @@ Partial Class reservation_user
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Black
-        Me.Panel4.Location = New System.Drawing.Point(18, 337)
+        Me.Panel4.Location = New System.Drawing.Point(18, 343)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(177, 10)
+        Me.Panel4.Size = New System.Drawing.Size(177, 3)
         Me.Panel4.TabIndex = 144
         '
         'DateTimePicker1
@@ -727,7 +726,7 @@ Partial Class reservation_user
         Me.DateTimePicker1.Cursor = System.Windows.Forms.Cursors.Default
         Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(268, 350)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(262, 255)
         Me.DateTimePicker1.MinDate = New Date(2022, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(153, 27)
@@ -738,7 +737,7 @@ Partial Class reservation_user
         '
         Me.btnExit.BackColor = System.Drawing.Color.Peru
         Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnExit.FlatAppearance.BorderSize = 2
+        Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -757,7 +756,7 @@ Partial Class reservation_user
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(264, 323)
+        Me.Label5.Location = New System.Drawing.Point(258, 228)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 23)
         Me.Label5.TabIndex = 146
@@ -771,16 +770,16 @@ Partial Class reservation_user
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label7.Location = New System.Drawing.Point(13, 368)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(92, 23)
+        Me.Label7.Size = New System.Drawing.Size(106, 23)
         Me.Label7.TabIndex = 147
-        Me.Label7.Text = "Start time"
+        Me.Label7.Text = "Arrival time"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Black
-        Me.Panel5.Location = New System.Drawing.Point(18, 487)
+        Me.Panel5.Location = New System.Drawing.Point(18, 489)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(178, 2)
+        Me.Panel5.Size = New System.Drawing.Size(178, 3)
         Me.Panel5.TabIndex = 152
         '
         'start_time
@@ -801,7 +800,7 @@ Partial Class reservation_user
         Me.end_time.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.end_time.Font = New System.Drawing.Font("Maiandra GD", 12.75!)
         Me.end_time.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.end_time.Location = New System.Drawing.Point(18, 468)
+        Me.end_time.Location = New System.Drawing.Point(17, 468)
         Me.end_time.Name = "end_time"
         Me.end_time.ReadOnly = True
         Me.end_time.Size = New System.Drawing.Size(178, 21)
@@ -812,7 +811,7 @@ Partial Class reservation_user
         Me.Panel8.BackColor = System.Drawing.Color.Black
         Me.Panel8.Location = New System.Drawing.Point(17, 416)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(178, 2)
+        Me.Panel8.Size = New System.Drawing.Size(178, 3)
         Me.Panel8.TabIndex = 149
         '
         'Label6
@@ -823,9 +822,9 @@ Partial Class reservation_user
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label6.Location = New System.Drawing.Point(14, 442)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 23)
+        Me.Label6.Size = New System.Drawing.Size(127, 23)
         Me.Label6.TabIndex = 150
-        Me.Label6.Text = "End time"
+        Me.Label6.Text = "Depature time"
         '
         'Label4
         '
@@ -838,6 +837,16 @@ Partial Class reservation_user
         Me.Label4.Size = New System.Drawing.Size(49, 23)
         Me.Label4.TabIndex = 124
         Me.Label4.Text = "Price"
+        '
+        'gif_image
+        '
+        Me.gif_image.Image = CType(resources.GetObject("gif_image.Image"), System.Drawing.Image)
+        Me.gif_image.Location = New System.Drawing.Point(38, 378)
+        Me.gif_image.Name = "gif_image"
+        Me.gif_image.Size = New System.Drawing.Size(58, 87)
+        Me.gif_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.gif_image.TabIndex = 95
+        Me.gif_image.TabStop = False
         '
         'reservation_user
         '
@@ -857,10 +866,6 @@ Partial Class reservation_user
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ArsflightBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ARSDataSet10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ArsflightBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SourceSelection, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -870,9 +875,10 @@ Partial Class reservation_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel15.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.gif_image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -883,13 +889,7 @@ Partial Class reservation_user
     Friend WithEvents search_btn As Button
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents SourceSelection As ARSDataSet19
-    Friend WithEvents ArsflightBindingSource As BindingSource
-    Friend WithEvents Ars_flightTableAdapter As ARSDataSet19TableAdapters.ars_flightTableAdapter
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ARSDataSet10 As ARSDataSet10
-    Friend WithEvents ArsflightBindingSource1 As BindingSource
-    Friend WithEvents Ars_flightTableAdapter1 As ARSDataSet10TableAdapters.ars_flightTableAdapter
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents min_btn As Button
@@ -910,7 +910,6 @@ Partial Class reservation_user
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents fli_id_str As TextBox
@@ -934,7 +933,11 @@ Partial Class reservation_user
     Friend WithEvents Label13 As Label
     Friend WithEvents date_now_label As Label
     Friend WithEvents time_now_label As Label
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents feeback_btn As Button
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents class_type As ComboBox
+    Friend WithEvents class_type_label As Label
+    Friend WithEvents gif_image As PictureBox
 End Class

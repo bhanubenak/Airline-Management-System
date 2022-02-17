@@ -3,28 +3,54 @@
 Public Class reservation_user
     Private ReadOnly conn As New SqlConnection("Data Source=(localdb)\ProjectsV13; Initial Catalog=ARS; Integrated Security=True;")
 
-
     Private Sub search_btn_Click(sender As Object, e As EventArgs) Handles search_btn.Click
+
         If ComboBox1.SelectedIndex < 0 Then
+            MsgBox("Select Source to continue", MsgBoxStyle.Exclamation, "Warning")
             Label9.Visible = True
-        End If
-        If ComboBox2.SelectedIndex < 0 Then
+            ComboBox1.Focus()
+        ElseIf ComboBox2.SelectedIndex < 0 Then
             Label10.Visible = True
+            MsgBox("Select Destination to continue", MsgBoxStyle.Exclamation, "Warning")
+            ComboBox2.Focus()
+
+        ElseIf ComboBox1.SelectedItem.ToString() = ComboBox2.SelectedItem.ToString() Then
+            MsgBox("Change Source/Destination to continue", MsgBoxStyle.Exclamation, "Warning")
+        Else
+            MsgBox(ComboBox1.SelectedItem.ToString() = ComboBox2.SelectedItem.ToString())
+            DataGridView1.Visible = True
+
+            Dim cmd As New SqlCommand("SELECT 
+                                                                        flight_id,  
+                                                                        fli_name, 
+                                                                        fli_source, 
+                                                                        fli_desti, 
+                                                                        fli_start_time, 
+                                                                        fli_end_time, 
+                                                                        fli_price 
+                                                           FROM 
+                                                                        ars_flight 
+                                                           WHERE 
+                                                                        fli_source='" + ComboBox1.Text + "' 
+                                                            AND
+                                                                        fli_desti='" + ComboBox2.Text + "'", conn)
+
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+            add_passenger.Enabled = True
+            conn.Close()
         End If
-
-        DataGridView1.Visible = True
-
-        Dim cmd As New SqlCommand("SELECT flight_id,  fli_name, fli_source, fli_desti, fli_start_time, fli_end_time, fli_price FROM ars_flight WHERE fli_source='" + ComboBox1.Text + "' and fli_desti='" + ComboBox2.Text + "'", conn)
-
-        Dim da As New SqlDataAdapter(cmd)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
-
-        conn.Close()
     End Sub
 
     Private Sub reservation_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        source_combo()
+        desti_combo()
+
+        add_passenger.Enabled = False
+        gif_image.Visible = False
+
         'TODO: to display date & time
         date_now_label.Text = Date.Now.ToString("dd-MM-yyyy")
         time_now_label.Text = TimeOfDay
@@ -33,10 +59,6 @@ Public Class reservation_user
         DateTimePicker1.MaxDate = Date.Now.AddMonths(1)
 
         DateTimePicker1.Value = Now
-        'TODO: This line of code loads data into the 'ARSDataSet10.ars_flight' table. You can move, or remove it, as needed.
-        Me.Ars_flightTableAdapter1.Fill(Me.ARSDataSet10.ars_flight)
-        'TODO: This line of code loads data into the 'ARSDataSet19.ars_flight' table. You can move, or remove it, as needed.
-        Me.Ars_flightTableAdapter.Fill(Me.SourceSelection.ars_flight)
 
     End Sub
 
@@ -68,16 +90,42 @@ Public Class reservation_user
     End Sub
 
     Private Sub add_passenger_Click(sender As Object, e As EventArgs) Handles add_passenger.Click
-        If DateTimePicker1.Value = Now Then
-            MsgBox("Select date" + Environment.NewLine + "Today's date will be selected", MsgBoxStyle.Information, MsgBoxStyle.YesNo)
+        add_passenger.Enabled = True
+        If ComboBox1.SelectedIndex < 0 Then
+            MsgBox("Select Source to continue", MsgBoxStyle.Exclamation, "Warning")
+            ComboBox1.Focus()
+        End If
+        If ComboBox2.SelectedIndex < 0 Then
+            MsgBox("Select Destination to continue", MsgBoxStyle.Exclamation, "Warning")
+            ComboBox2.Focus()
+        End If
+        If class_type.SelectedIndex < 0 Then
+            MsgBox("Select the class Type", MsgBoxStyle.Critical, "Warning")
         End If
 
-        If fli_name.Text = Nothing Or start_time.Text = Nothing Or end_time.Text = Nothing Or price.Text = Nothing Then
-            MsgBox("Click on fli_id  " & Environment.NewLine & "To Continue ", MsgBoxStyle.Exclamation)
-            ComboBox1.Focus()
+        If fli_name.Text = "" Or start_time.Text = "" Or end_time.Text = "" Or price.Text = "" Then
+            MsgBox("CLick on Flight  to continue", MsgBoxStyle.Exclamation, "Warning")
+            gif_image.Visible = True
         Else
-            Reserve_page.Show()
-            Me.Hide()
+            Try
+                If DateTimePicker1.Value.ToString("dd/MM/yyyy") = date_now_label.Text Then
+                    Dim start_time_ As DateTime = DateTime.Parse(start_time.Text.ToString)
+                    MsgBox(start_time_.ToString("HH:mm:ss"))
+                    Dim start_tim As DateTime = start_time_.ToString("HH:mm:ss")
+                    If start_tim > TimeOfDay Then
+                        Reserve_page.Show()
+                        Me.Hide()
+                    Else
+                        MsgBox("Change Date/Time to continue", MsgBoxStyle.Critical)
+                        DateTimePicker1.Focus()
+                    End If
+                Else
+                    Reserve_page.Show()
+                    Me.Hide()
+                End If
+            Catch ex As Exception
+                MsgBox(ex)
+            End Try
         End If
     End Sub
 
@@ -113,5 +161,61 @@ Public Class reservation_user
     Private Sub feeback_btn_Click(sender As Object, e As EventArgs) Handles feeback_btn.Click
         feedback_form.Show()
         Me.Hide()
+    End Sub
+
+    Public Sub source_combo()
+        Dim bkNum(50) As String
+
+        Dim i As Integer = 0
+
+        conn.Open()
+
+        Dim cmd As New SqlCommand("select distinct fli_source from ars_flight", conn)
+        'execute data reader
+
+        Dim dr As SqlDataReader = cmd.ExecuteReader()
+
+        If dr.HasRows Then
+            While dr.Read()
+                bkNum(i) = dr(0).ToString()
+                i += 1
+            End While
+        End If
+
+        For index As Integer = 0 To bkNum.GetUpperBound(0)
+            If Not (bkNum(index) Is Nothing) Then
+                ComboBox1.Items.Add(bkNum(index))
+            End If
+        Next
+        conn.Close()
+    End Sub
+
+    Public Sub desti_combo()
+        Dim bkNum(50) As String
+
+        Dim i As Integer = 0
+
+        conn.Open()
+
+        Dim cmd As New SqlCommand("Select distinct fli_desti from ars_flight", conn)
+        'execute data reader
+
+        Dim dr As SqlDataReader = cmd.ExecuteReader()
+
+        If dr.HasRows Then
+            While dr.Read()
+                bkNum(i) = dr(0).ToString()
+                i += 1
+
+            End While
+        End If
+
+        For index As Integer = 0 To bkNum.GetUpperBound(0)
+            If Not (bkNum(index) Is Nothing) Then
+                ComboBox2.Items.Add(bkNum(index))
+            End If
+        Next
+
+        conn.Close()
     End Sub
 End Class

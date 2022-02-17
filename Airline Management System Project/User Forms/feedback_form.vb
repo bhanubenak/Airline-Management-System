@@ -36,7 +36,7 @@ Public Class feedback_form
 
         feeback_form.Enabled = False
         RichTextBox2.Enabled = False
-        'GENERATING PNR NUMBER FOR PASSENGER
+        'GENERATING feedback number FOR PASSENGER
         Dim RememberSet As New HashSet(Of Long)
         Dim RandomNumber As Long
         While RememberSet.Count < 5
@@ -80,7 +80,7 @@ Public Class feedback_form
             Login_Page.Show()
             'home_user.Show()
             Me.Hide()
-            End If
+        End If
         'Catch ex As Exception
         'MsgBox("Error in uploading the query", ex.Message)
         'Finally

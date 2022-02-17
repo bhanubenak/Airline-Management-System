@@ -97,6 +97,8 @@ Partial Class Reserve_page
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.feeback_btn = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Flight_id = New System.Windows.Forms.TextBox()
         Label12 = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -117,6 +119,7 @@ Partial Class Reserve_page
         'Label12
         '
         Label12.AutoSize = True
+        Label12.BackColor = System.Drawing.Color.Transparent
         Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label12.ForeColor = System.Drawing.Color.Black
         Label12.Location = New System.Drawing.Point(611, 417)
@@ -151,7 +154,7 @@ Partial Class Reserve_page
         '
         'Panel1
         '
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.min_btn)
         Me.Panel1.Controls.Add(Me.close_btn)
@@ -226,6 +229,8 @@ Partial Class Reserve_page
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.LightGray
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Panel4.Controls.Add(Me.RichTextBox2)
         Me.Panel4.Controls.Add(Me.Panel2)
         Me.Panel4.Controls.Add(Me.age_label)
@@ -279,13 +284,17 @@ Partial Class Reserve_page
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox2.Size = New System.Drawing.Size(751, 103)
+        Me.RichTextBox2.Size = New System.Drawing.Size(751, 119)
         Me.RichTextBox2.TabIndex = 1
-        Me.RichTextBox2.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "     PERSONAL DETAILS"
+        Me.RichTextBox2.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "  " & Global.Microsoft.VisualBasic.ChrW(9) & "     PERSONAL DETAILS"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.Flight_id)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.date_now_label)
@@ -305,9 +314,9 @@ Partial Class Reserve_page
         Me.Panel2.Controls.Add(Me.user_id)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(972, 0)
+        Me.Panel2.Location = New System.Drawing.Point(971, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(394, 720)
+        Me.Panel2.Size = New System.Drawing.Size(395, 720)
         Me.Panel2.TabIndex = 224
         '
         'Label11
@@ -375,7 +384,7 @@ Partial Class Reserve_page
         Me.Label5.BackColor = System.Drawing.Color.Crimson
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(254, 239)
+        Me.Label5.Location = New System.Drawing.Point(261, 322)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(134, 13)
         Me.Label5.TabIndex = 133
@@ -387,7 +396,7 @@ Partial Class Reserve_page
         Me.pnr_no_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnr_no_text.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold)
         Me.pnr_no_text.ForeColor = System.Drawing.Color.Black
-        Me.pnr_no_text.Location = New System.Drawing.Point(126, 430)
+        Me.pnr_no_text.Location = New System.Drawing.Point(163, 612)
         Me.pnr_no_text.Multiline = False
         Me.pnr_no_text.Name = "pnr_no_text"
         Me.pnr_no_text.Size = New System.Drawing.Size(223, 42)
@@ -401,7 +410,7 @@ Partial Class Reserve_page
         Me.pnr_label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pnr_label.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnr_label.ForeColor = System.Drawing.Color.Black
-        Me.pnr_label.Location = New System.Drawing.Point(22, 439)
+        Me.pnr_label.Location = New System.Drawing.Point(59, 621)
         Me.pnr_label.Name = "pnr_label"
         Me.pnr_label.Size = New System.Drawing.Size(100, 27)
         Me.pnr_label.TabIndex = 131
@@ -411,7 +420,7 @@ Partial Class Reserve_page
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Black
-        Me.Panel6.Location = New System.Drawing.Point(6, 180)
+        Me.Panel6.Location = New System.Drawing.Point(13, 263)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(164, 3)
         Me.Panel6.TabIndex = 130
@@ -422,7 +431,7 @@ Partial Class Reserve_page
         Me.fli_name_label.BackColor = System.Drawing.Color.Transparent
         Me.fli_name_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.fli_name_label.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fli_name_label.Location = New System.Drawing.Point(241, 158)
+        Me.fli_name_label.Location = New System.Drawing.Point(248, 241)
         Me.fli_name_label.Name = "fli_name_label"
         Me.fli_name_label.Size = New System.Drawing.Size(113, 23)
         Me.fli_name_label.TabIndex = 129
@@ -434,7 +443,7 @@ Partial Class Reserve_page
         Me.fli_name.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.fli_name.Font = New System.Drawing.Font("Segoe UI", 13.0!)
         Me.fli_name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.fli_name.Location = New System.Drawing.Point(6, 156)
+        Me.fli_name.Location = New System.Drawing.Point(13, 239)
         Me.fli_name.Name = "fli_name"
         Me.fli_name.ReadOnly = True
         Me.fli_name.Size = New System.Drawing.Size(164, 24)
@@ -450,7 +459,7 @@ Partial Class Reserve_page
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Rockwell", 13.0!)
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(212, 322)
+        Me.Button1.Location = New System.Drawing.Point(219, 532)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(171, 48)
         Me.Button1.TabIndex = 127
@@ -467,7 +476,7 @@ Partial Class Reserve_page
         Me.confirm_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.confirm_btn.Font = New System.Drawing.Font("Rockwell", 13.0!)
         Me.confirm_btn.ForeColor = System.Drawing.Color.Black
-        Me.confirm_btn.Location = New System.Drawing.Point(6, 322)
+        Me.confirm_btn.Location = New System.Drawing.Point(13, 532)
         Me.confirm_btn.Name = "confirm_btn"
         Me.confirm_btn.Size = New System.Drawing.Size(181, 48)
         Me.confirm_btn.TabIndex = 126
@@ -495,7 +504,7 @@ Partial Class Reserve_page
         Me.pay_type_combo_box.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
         Me.pay_type_combo_box.FormattingEnabled = True
         Me.pay_type_combo_box.Items.AddRange(New Object() {"Amazon", "G-Pay", "Paytm", "PhonePe"})
-        Me.pay_type_combo_box.Location = New System.Drawing.Point(6, 207)
+        Me.pay_type_combo_box.Location = New System.Drawing.Point(13, 290)
         Me.pay_type_combo_box.Name = "pay_type_combo_box"
         Me.pay_type_combo_box.Size = New System.Drawing.Size(180, 23)
         Me.pay_type_combo_box.Sorted = True
@@ -507,11 +516,11 @@ Partial Class Reserve_page
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(267, 262)
+        Me.Label4.Location = New System.Drawing.Point(258, 345)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 23)
+        Me.Label4.Size = New System.Drawing.Size(103, 23)
         Me.Label4.TabIndex = 123
-        Me.Label4.Text = "User-id"
+        Me.Label4.Text = "payment-id"
         '
         'user_id
         '
@@ -519,7 +528,7 @@ Partial Class Reserve_page
         Me.user_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.user_id.Font = New System.Drawing.Font("Segoe UI", 13.0!)
         Me.user_id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.user_id.Location = New System.Drawing.Point(6, 261)
+        Me.user_id.Location = New System.Drawing.Point(13, 344)
         Me.user_id.Name = "user_id"
         Me.user_id.Size = New System.Drawing.Size(226, 24)
         Me.user_id.TabIndex = 122
@@ -530,7 +539,7 @@ Partial Class Reserve_page
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(212, 207)
+        Me.Label13.Location = New System.Drawing.Point(219, 290)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(176, 23)
         Me.Label13.TabIndex = 121
@@ -572,6 +581,7 @@ Partial Class Reserve_page
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(610, 256)
@@ -710,7 +720,7 @@ Partial Class Reserve_page
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(723, 545)
+        Me.Button5.Location = New System.Drawing.Point(725, 616)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(140, 43)
         Me.Button5.TabIndex = 211
@@ -740,7 +750,7 @@ Partial Class Reserve_page
         Me.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.clear_btn.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear_btn.ForeColor = System.Drawing.Color.Black
-        Me.clear_btn.Location = New System.Drawing.Point(501, 545)
+        Me.clear_btn.Location = New System.Drawing.Point(503, 616)
         Me.clear_btn.Name = "clear_btn"
         Me.clear_btn.Size = New System.Drawing.Size(149, 43)
         Me.clear_btn.TabIndex = 208
@@ -757,7 +767,7 @@ Partial Class Reserve_page
         Me.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.register_btn.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.register_btn.ForeColor = System.Drawing.Color.Black
-        Me.register_btn.Location = New System.Drawing.Point(256, 545)
+        Me.register_btn.Location = New System.Drawing.Point(258, 616)
         Me.register_btn.Name = "register_btn"
         Me.register_btn.Size = New System.Drawing.Size(161, 43)
         Me.register_btn.TabIndex = 207
@@ -836,6 +846,7 @@ Partial Class Reserve_page
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(254, 417)
@@ -847,6 +858,7 @@ Partial Class Reserve_page
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(610, 349)
@@ -858,6 +870,7 @@ Partial Class Reserve_page
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(254, 349)
@@ -885,6 +898,7 @@ Partial Class Reserve_page
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(253, 256)
@@ -895,8 +909,7 @@ Partial Class Reserve_page
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel3.Controls.Add(Me.PictureBox7)
         Me.Panel3.Controls.Add(Me.abt_dev)
         Me.Panel3.Controls.Add(Me.PictureBox5)
@@ -966,7 +979,7 @@ Partial Class Reserve_page
         '
         'PictureBox6
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox6.BackColor = System.Drawing.Color.LightSeaGreen
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(0, -7)
@@ -1100,6 +1113,30 @@ Partial Class Reserve_page
         Me.feeback_btn.Text = "Feedback Form"
         Me.feeback_btn.UseVisualStyleBackColor = False
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label15.Location = New System.Drawing.Point(248, 197)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(82, 23)
+        Me.Label15.TabIndex = 140
+        Me.Label15.Text = "FLight id"
+        '
+        'Flight_id
+        '
+        Me.Flight_id.BackColor = System.Drawing.Color.White
+        Me.Flight_id.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Flight_id.Font = New System.Drawing.Font("Segoe UI", 13.0!)
+        Me.Flight_id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Flight_id.Location = New System.Drawing.Point(13, 195)
+        Me.Flight_id.Name = "Flight_id"
+        Me.Flight_id.ReadOnly = True
+        Me.Flight_id.Size = New System.Drawing.Size(164, 24)
+        Me.Flight_id.TabIndex = 139
+        '
         'Reserve_page
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1205,4 +1242,6 @@ Partial Class Reserve_page
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents abt_dev As Button
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Flight_id As TextBox
 End Class

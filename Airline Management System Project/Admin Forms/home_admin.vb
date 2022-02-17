@@ -7,7 +7,7 @@ Public Class home_admin
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        reservation_user.Show()
+        modify_Admin.Show()
         Me.Hide()
     End Sub
 
@@ -16,7 +16,7 @@ Public Class home_admin
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         add_flight_admin.Show()
         Me.Hide()
     End Sub
@@ -46,32 +46,14 @@ Public Class home_admin
             conn.Open()
             Dim da As New SqlDataAdapter()
             Dim dset As New DataTable()
-            cmd.CommandText = "SELECT 
-                                                                    username, 
-                                                                    fname, 
-                                                                    lname, 
-                                                                    dob, 
-                                                                    age, 
-                                                                    gen, 
-                                                                    address, 
-                                                                    mobile, 
-                                                                    country, 
-                                                                    date_reserve, 
-                                                                    fli_name, 
-                                                                    source_reserve, 
-                                                                    destin_reserve, 
-                                                                    total_amt, 
-                                                                    pay_type, 
-                                                                    user_id  
-
-                                                        FROM 
-                                                                    ars_reserve"
+            cmd.CommandText = "SELECT  *  FROM ars_reserve"
             cmd.Connection = conn
             da.SelectCommand = cmd
             da.Fill(dset)
             DataGridView1.DataSource = dset
+
         Catch ex As Exception
-            MsgBox(ex)
+            MsgBox(ex.ToString())
         Finally
             conn.Close()
         End Try
@@ -82,11 +64,11 @@ Public Class home_admin
 
         load_date()
         load_date_user()
-
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         DataGridView1.Visible = True
+        load_date_user()
     End Sub
 
     Private Sub View_custo_btn_Click(sender As Object, e As EventArgs) Handles View_custo_btn.Click
@@ -115,6 +97,11 @@ Public Class home_admin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         view_feedback_admin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        About_Us.Show()
         Me.Hide()
     End Sub
 End Class

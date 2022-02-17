@@ -38,7 +38,7 @@ Partial Class feedback_form
         Me.close_btn = New System.Windows.Forms.Button()
         Me.max_btn = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.abt_dev = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -53,7 +53,7 @@ Partial Class feedback_form
         Me.feeback_form = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +65,7 @@ Partial Class feedback_form
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.Controls.Add(Me.Panel8)
         Me.Panel1.Controls.Add(Me.query_no)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -101,6 +102,7 @@ Partial Class feedback_form
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(97, 185)
         Me.Label2.Name = "Label2"
@@ -111,8 +113,9 @@ Partial Class feedback_form
         'username_display
         '
         Me.username_display.AutoSize = True
+        Me.username_display.BackColor = System.Drawing.Color.Transparent
         Me.username_display.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.username_display.Location = New System.Drawing.Point(687, 46)
+        Me.username_display.Location = New System.Drawing.Point(742, 10)
         Me.username_display.Name = "username_display"
         Me.username_display.Size = New System.Drawing.Size(86, 21)
         Me.username_display.TabIndex = 47
@@ -154,9 +157,12 @@ Partial Class feedback_form
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.BackColor = System.Drawing.Color.Gray
+        Me.RichTextBox2.BackColor = System.Drawing.Color.LightGray
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox2.Location = New System.Drawing.Point(92, 299)
         Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ShowSelectionMargin = True
         Me.RichTextBox2.Size = New System.Drawing.Size(695, 177)
         Me.RichTextBox2.TabIndex = 44
         Me.RichTextBox2.Text = ""
@@ -164,6 +170,7 @@ Partial Class feedback_form
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(460, 185)
         Me.Label1.Name = "Label1"
@@ -183,14 +190,14 @@ Partial Class feedback_form
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RichTextBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe Script", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(240, 3)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Viner Hand ITC", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(411, 134)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 122)
         Me.RichTextBox1.TabIndex = 41
-        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Feedback Form"
+        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Feedback Form"
         '
         'min_btn
         '
@@ -231,9 +238,8 @@ Partial Class feedback_form
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
-        Me.Panel3.Controls.Add(Me.PictureBox6)
+        Me.Panel3.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel3.Controls.Add(Me.PictureBox8)
         Me.Panel3.Controls.Add(Me.PictureBox7)
         Me.Panel3.Controls.Add(Me.abt_dev)
         Me.Panel3.Controls.Add(Me.PictureBox5)
@@ -252,17 +258,16 @@ Partial Class feedback_form
         Me.Panel3.Size = New System.Drawing.Size(221, 700)
         Me.Panel3.TabIndex = 190
         '
-        'PictureBox6
+        'PictureBox8
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(-1, 42)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(221, 188)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 67
-        Me.PictureBox6.TabStop = False
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(24, 42)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(185, 160)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 186
+        Me.PictureBox8.TabStop = False
         '
         'PictureBox7
         '
@@ -298,7 +303,7 @@ Partial Class feedback_form
         Me.PictureBox5.Location = New System.Drawing.Point(0, 239)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(64, 64)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox5.TabIndex = 26
         Me.PictureBox5.TabStop = False
         '
@@ -322,10 +327,10 @@ Partial Class feedback_form
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 318)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 313)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(64, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.Size = New System.Drawing.Size(61, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
         '
@@ -365,9 +370,9 @@ Partial Class feedback_form
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.LightSeaGreen
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 616)
+        Me.PictureBox4.Location = New System.Drawing.Point(3, 620)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(60, 56)
+        Me.PictureBox4.Size = New System.Drawing.Size(60, 48)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox4.TabIndex = 24
         Me.PictureBox4.TabStop = False
@@ -430,8 +435,7 @@ Partial Class feedback_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1064, 700)
         Me.Controls.Add(Me.Panel3)
@@ -447,7 +451,8 @@ Partial Class feedback_form
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -476,7 +481,6 @@ Partial Class feedback_form
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents abt_dev As Button
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents home_btn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents logout As Button
@@ -486,4 +490,5 @@ Partial Class feedback_form
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents feeback_form As Button
+    Friend WithEvents PictureBox8 As PictureBox
 End Class

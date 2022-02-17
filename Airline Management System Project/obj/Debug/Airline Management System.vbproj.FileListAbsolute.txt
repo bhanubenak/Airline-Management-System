@@ -17,8 +17,11 @@ C:\Users\Admin\source\repos\Airline Management System Project\Airline Management
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Reserve_page.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.Login_Page.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.About_Us.resources
-C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.test.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.feedback_form.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.print_ticket.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.refund_user.resources
 C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.view_feedback_admin.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.forgot.resources
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\bin\Debug\itextsharp.dll
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\bin\Debug\itextsharp.xml
+C:\Users\Admin\source\repos\Airline Management System Project\Airline Management System Project\obj\Debug\Airline_Management_System_Project.modify_Admin.resources

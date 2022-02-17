@@ -30,8 +30,11 @@ Partial Class Cancel_flight_user
         Me.time_now_label = New System.Windows.Forms.Label()
         Me.clear_cancel_btn = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.cancel_refund_text = New System.Windows.Forms.TextBox()
         Me.source_cancel = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.desti_cancel = New System.Windows.Forms.TextBox()
@@ -72,14 +75,11 @@ Partial Class Cancel_flight_user
         Me.can_ticket = New System.Windows.Forms.Button()
         Me.reservation = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.close_btn = New System.Windows.Forms.Button()
         Me.max_btn = New System.Windows.Forms.Button()
         Me.min_btn = New System.Windows.Forms.Button()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.cancel_refund_text = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -90,13 +90,14 @@ Partial Class Cancel_flight_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label7)
@@ -123,7 +124,7 @@ Partial Class Cancel_flight_user
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(857, 49)
+        Me.Label11.Location = New System.Drawing.Point(975, 100)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 23)
         Me.Label11.TabIndex = 142
@@ -135,7 +136,7 @@ Partial Class Cancel_flight_user
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(857, 17)
+        Me.Label7.Location = New System.Drawing.Point(975, 68)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 23)
         Me.Label7.TabIndex = 141
@@ -147,7 +148,7 @@ Partial Class Cancel_flight_user
         Me.date_now_label.BackColor = System.Drawing.Color.Transparent
         Me.date_now_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.date_now_label.ForeColor = System.Drawing.Color.Coral
-        Me.date_now_label.Location = New System.Drawing.Point(926, 17)
+        Me.date_now_label.Location = New System.Drawing.Point(1044, 68)
         Me.date_now_label.Name = "date_now_label"
         Me.date_now_label.Size = New System.Drawing.Size(104, 23)
         Me.date_now_label.TabIndex = 140
@@ -159,7 +160,7 @@ Partial Class Cancel_flight_user
         Me.time_now_label.BackColor = System.Drawing.Color.Transparent
         Me.time_now_label.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.time_now_label.ForeColor = System.Drawing.Color.Coral
-        Me.time_now_label.Location = New System.Drawing.Point(926, 49)
+        Me.time_now_label.Location = New System.Drawing.Point(1044, 100)
         Me.time_now_label.Name = "time_now_label"
         Me.time_now_label.Size = New System.Drawing.Size(112, 23)
         Me.time_now_label.TabIndex = 139
@@ -184,7 +185,7 @@ Partial Class Cancel_flight_user
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.LightBlue
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel3.Controls.Add(Me.Panel13)
         Me.Panel3.Controls.Add(Me.Panel10)
@@ -215,6 +216,15 @@ Partial Class Cancel_flight_user
         Me.Panel3.Size = New System.Drawing.Size(858, 311)
         Me.Panel3.TabIndex = 104
         '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.Black
+        Me.Panel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Panel13.Location = New System.Drawing.Point(631, 257)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(200, 3)
+        Me.Panel13.TabIndex = 119
+        '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Black
@@ -223,9 +233,21 @@ Partial Class Cancel_flight_user
         Me.Panel10.Size = New System.Drawing.Size(200, 3)
         Me.Panel10.TabIndex = 124
         '
+        'cancel_refund_text
+        '
+        Me.cancel_refund_text.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.cancel_refund_text.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.cancel_refund_text.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.cancel_refund_text.ForeColor = System.Drawing.Color.Black
+        Me.cancel_refund_text.Location = New System.Drawing.Point(631, 237)
+        Me.cancel_refund_text.Name = "cancel_refund_text"
+        Me.cancel_refund_text.ReadOnly = True
+        Me.cancel_refund_text.Size = New System.Drawing.Size(200, 20)
+        Me.cancel_refund_text.TabIndex = 118
+        '
         'source_cancel
         '
-        Me.source_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.source_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.source_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.source_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.source_cancel.ForeColor = System.Drawing.Color.Black
@@ -234,6 +256,18 @@ Partial Class Cancel_flight_user
         Me.source_cancel.ReadOnly = True
         Me.source_cancel.Size = New System.Drawing.Size(200, 20)
         Me.source_cancel.TabIndex = 122
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(627, 211)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(108, 23)
+        Me.Label9.TabIndex = 117
+        Me.Label9.Text = "Refund Amt"
         '
         'Label8
         '
@@ -257,7 +291,7 @@ Partial Class Cancel_flight_user
         '
         'desti_cancel
         '
-        Me.desti_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.desti_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.desti_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.desti_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.desti_cancel.ForeColor = System.Drawing.Color.Black
@@ -289,7 +323,7 @@ Partial Class Cancel_flight_user
         '
         'user_id_cancel
         '
-        Me.user_id_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.user_id_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.user_id_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.user_id_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.user_id_cancel.ForeColor = System.Drawing.Color.Black
@@ -330,7 +364,7 @@ Partial Class Cancel_flight_user
         '
         'pay_type_cancel
         '
-        Me.pay_type_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.pay_type_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.pay_type_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.pay_type_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.pay_type_cancel.ForeColor = System.Drawing.Color.Black
@@ -342,7 +376,7 @@ Partial Class Cancel_flight_user
         '
         'fli_date_cancel
         '
-        Me.fli_date_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.fli_date_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.fli_date_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.fli_date_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.fli_date_cancel.ForeColor = System.Drawing.Color.Black
@@ -386,7 +420,7 @@ Partial Class Cancel_flight_user
         '
         'fli_price_cancel
         '
-        Me.fli_price_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.fli_price_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.fli_price_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.fli_price_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.fli_price_cancel.ForeColor = System.Drawing.Color.Black
@@ -418,7 +452,7 @@ Partial Class Cancel_flight_user
         '
         'fli_name_cancel
         '
-        Me.fli_name_cancel.BackColor = System.Drawing.Color.LightBlue
+        Me.fli_name_cancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.fli_name_cancel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.fli_name_cancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.fli_name_cancel.ForeColor = System.Drawing.Color.Black
@@ -493,14 +527,14 @@ Partial Class Cancel_flight_user
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RichTextBox1.BackColor = System.Drawing.Color.Teal
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(285, 3)
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(362, 62)
+        Me.RichTextBox1.Size = New System.Drawing.Size(1168, 65)
         Me.RichTextBox1.TabIndex = 51
-        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "CANCEL YOUR FLIGHT"
+        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "CANCEL YOUR FLIGHT"
         '
         'Panel9
         '
@@ -535,7 +569,7 @@ Partial Class Cancel_flight_user
         '
         'Panel11
         '
-        Me.Panel11.BackgroundImage = CType(resources.GetObject("Panel11.BackgroundImage"), System.Drawing.Image)
+        Me.Panel11.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel11.Controls.Add(Me.PictureBox7)
         Me.Panel11.Controls.Add(Me.feeback_btn)
         Me.Panel11.Controls.Add(Me.PictureBox5)
@@ -721,28 +755,27 @@ Partial Class Cancel_flight_user
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.Panel15.Controls.Add(Me.PictureBox6)
+        Me.Panel15.Controls.Add(Me.PictureBox8)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(218, 174)
         Me.Panel15.TabIndex = 1
         '
-        'PictureBox6
+        'PictureBox8
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(0, -7)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(218, 188)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 67
-        Me.PictureBox6.TabStop = False
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(17, 7)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(185, 160)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 186
+        Me.PictureBox8.TabStop = False
         '
         'Panel1
         '
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.close_btn)
         Me.Panel1.Controls.Add(Me.max_btn)
@@ -787,39 +820,6 @@ Partial Class Cancel_flight_user
         Me.min_btn.TabIndex = 183
         Me.min_btn.UseVisualStyleBackColor = False
         '
-        'Panel13
-        '
-        Me.Panel13.BackColor = System.Drawing.Color.Black
-        Me.Panel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Panel13.Location = New System.Drawing.Point(631, 257)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(200, 3)
-        Me.Panel13.TabIndex = 119
-        '
-        'cancel_refund_text
-        '
-        Me.cancel_refund_text.BackColor = System.Drawing.Color.LightBlue
-        Me.cancel_refund_text.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.cancel_refund_text.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.cancel_refund_text.ForeColor = System.Drawing.Color.Black
-        Me.cancel_refund_text.Location = New System.Drawing.Point(631, 237)
-        Me.cancel_refund_text.Name = "cancel_refund_text"
-        Me.cancel_refund_text.ReadOnly = True
-        Me.cancel_refund_text.Size = New System.Drawing.Size(200, 20)
-        Me.cancel_refund_text.TabIndex = 118
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(627, 211)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(108, 23)
-        Me.Label9.TabIndex = 117
-        Me.Label9.Text = "Refund Amt"
-        '
         'Cancel_flight_user
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -844,7 +844,7 @@ Partial Class Cancel_flight_user
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel15.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -900,10 +900,10 @@ Partial Class Cancel_flight_user
     Friend WithEvents Label7 As Label
     Friend WithEvents date_now_label As Label
     Friend WithEvents time_now_label As Label
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents feeback_btn As Button
     Friend WithEvents Panel13 As Panel
     Friend WithEvents cancel_refund_text As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents PictureBox8 As PictureBox
 End Class

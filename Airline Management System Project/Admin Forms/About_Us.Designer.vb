@@ -24,136 +24,46 @@ Partial Class About_Us
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About_Us))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.min_btn = New System.Windows.Forms.Button()
         Me.close_btn = New System.Windows.Forms.Button()
         Me.max_btn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.RichTextBox7)
-        Me.Panel1.Controls.Add(Me.RichTextBox6)
-        Me.Panel1.Controls.Add(Me.RichTextBox5)
-        Me.Panel1.Controls.Add(Me.RichTextBox4)
-        Me.Panel1.Controls.Add(Me.RichTextBox3)
-        Me.Panel1.Controls.Add(Me.RichTextBox2)
-        Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.RichTextBox1)
+        Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 48)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1098, 728)
+        Me.Panel1.Size = New System.Drawing.Size(1098, 582)
         Me.Panel1.TabIndex = 0
-        '
-        'RichTextBox7
-        '
-        Me.RichTextBox7.Font = New System.Drawing.Font("Euclid", 8.95!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox7.Location = New System.Drawing.Point(778, 490)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.Size = New System.Drawing.Size(148, 107)
-        Me.RichTextBox7.TabIndex = 61
-        Me.RichTextBox7.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "        R1911624" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "     5th Sem BCA 'A'"
-        '
-        'RichTextBox6
-        '
-        Me.RichTextBox6.Font = New System.Drawing.Font("Euclid", 8.95!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox6.Location = New System.Drawing.Point(451, 492)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(148, 107)
-        Me.RichTextBox6.TabIndex = 60
-        Me.RichTextBox6.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "        R1911621" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "     5th Sem BCA 'A'"
-        '
-        'RichTextBox5
-        '
-        Me.RichTextBox5.Font = New System.Drawing.Font("Euclid", 8.95!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox5.Location = New System.Drawing.Point(108, 492)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(148, 107)
-        Me.RichTextBox5.TabIndex = 59
-        Me.RichTextBox5.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "        R1911642" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "     5th Sem BCA 'A'"
-        '
-        'RichTextBox4
-        '
-        Me.RichTextBox4.Font = New System.Drawing.Font("Lucida Handwriting", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.RichTextBox4.Location = New System.Drawing.Point(734, 418)
-        Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.Size = New System.Drawing.Size(243, 66)
-        Me.RichTextBox4.TabIndex = 58
-        Me.RichTextBox4.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "     DEEPAK KUMAR SINGH"
-        '
-        'RichTextBox3
-        '
-        Me.RichTextBox3.Font = New System.Drawing.Font("Lucida Handwriting", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.RichTextBox3.Location = New System.Drawing.Point(411, 420)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(230, 66)
-        Me.RichTextBox3.TabIndex = 57
-        Me.RichTextBox3.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & "     BHANU PRAKASH D N"
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.Font = New System.Drawing.Font("Lucida Handwriting", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(60, 418)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(247, 68)
-        Me.RichTextBox2.TabIndex = 56
-        Me.RichTextBox2.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "          KARTHIK RAJU S" & Global.Microsoft.VisualBasic.ChrW(10) & "                  "
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(703, 105)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(307, 307)
-        Me.PictureBox3.TabIndex = 55
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(376, 105)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(307, 307)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 54
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 105)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(307, 307)
-        Me.PictureBox1.TabIndex = 53
-        Me.PictureBox1.TabStop = False
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(365, 3)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(354, 81)
-        Me.RichTextBox1.TabIndex = 52
-        Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "About Us"
         '
         'min_btn
         '
         Me.min_btn.BackgroundImage = CType(resources.GetObject("min_btn.BackgroundImage"), System.Drawing.Image)
+        Me.min_btn.FlatAppearance.BorderSize = 0
         Me.min_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.min_btn.Location = New System.Drawing.Point(990, 6)
         Me.min_btn.Name = "min_btn"
@@ -164,6 +74,7 @@ Partial Class About_Us
         'close_btn
         '
         Me.close_btn.BackgroundImage = CType(resources.GetObject("close_btn.BackgroundImage"), System.Drawing.Image)
+        Me.close_btn.FlatAppearance.BorderSize = 0
         Me.close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.close_btn.Location = New System.Drawing.Point(1074, 6)
         Me.close_btn.Name = "close_btn"
@@ -176,6 +87,7 @@ Partial Class About_Us
         Me.max_btn.BackColor = System.Drawing.Color.Transparent
         Me.max_btn.BackgroundImage = CType(resources.GetObject("max_btn.BackgroundImage"), System.Drawing.Image)
         Me.max_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.max_btn.FlatAppearance.BorderSize = 0
         Me.max_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.max_btn.Location = New System.Drawing.Point(1032, 6)
         Me.max_btn.Name = "max_btn"
@@ -183,12 +95,133 @@ Partial Class About_Us
         Me.max_btn.TabIndex = 185
         Me.max_btn.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(90, 273)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 28)
+        Me.Label1.TabIndex = 53
+        Me.Label1.Text = "mail: "
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(175, 273)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(285, 28)
+        Me.Label2.TabIndex = 54
+        Me.Label2.Text = "airlineteam1311@gmail.com"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label3.Font = New System.Drawing.Font("Lucida Fax", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(429, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(205, 32)
+        Me.Label3.TabIndex = 55
+        Me.Label3.Text = "CONTACT US"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(210, 345)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(239, 28)
+        Me.Label4.TabIndex = 57
+        Me.Label4.Text = "Kemapapura, Bengaluru"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(78, 345)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 28)
+        Me.Label5.TabIndex = 56
+        Me.Label5.Text = "Address: "
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(732, 345)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(239, 28)
+        Me.Label6.TabIndex = 62
+        Me.Label6.Text = "Kemapapura, Bengaluru"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(609, 345)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(98, 28)
+        Me.Label7.TabIndex = 61
+        Me.Label7.Text = "Address: "
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(704, 273)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(255, 28)
+        Me.Label9.TabIndex = 59
+        Me.Label9.Text = "a1developers@gmail.com"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(619, 273)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 28)
+        Me.Label10.TabIndex = 58
+        Me.Label10.Text = "mail: "
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(236, 202)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(82, 28)
+        Me.Label11.TabIndex = 63
+        Me.Label11.Text = "ADMIN"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(704, 202)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(134, 28)
+        Me.Label12.TabIndex = 64
+        Me.Label12.Text = "DEVELOPERS"
+        '
         'About_Us
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1122, 788)
+        Me.ClientSize = New System.Drawing.Size(1122, 669)
         Me.Controls.Add(Me.min_btn)
         Me.Controls.Add(Me.close_btn)
         Me.Controls.Add(Me.max_btn)
@@ -197,9 +230,7 @@ Partial Class About_Us
         Me.Name = "About_Us"
         Me.Text = "About_Us"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -208,14 +239,15 @@ Partial Class About_Us
     Friend WithEvents min_btn As Button
     Friend WithEvents close_btn As Button
     Friend WithEvents max_btn As Button
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents RichTextBox4 As RichTextBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox7 As RichTextBox
-    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

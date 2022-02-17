@@ -44,10 +44,12 @@ Public Class Login_Page
         'login page values will re-setting to empty.
         txtPassword.Text = Nothing
         txtUsername.Text = Nothing
+        code.Text = Nothing
     End Sub
 
     Private Sub btnRegister_Click_1(sender As Object, e As EventArgs) Handles btnRegister.Click
         'This button will close the login panel and it will show register panel.
+        txtPassword.Text = Nothing
         txt_user_name.Focus()
         register_Panel.Enabled = True
         register_Panel.Visible = True
@@ -61,124 +63,132 @@ Public Class Login_Page
     End Sub
 
     Private Sub Login_page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.Text = Nothing
         register_Panel.Enabled = False
+
     End Sub
 
     Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
         If txtUsername.Text = Nothing Then
             MsgBox("Enter Username")
+            txtUsername.Focus()
         ElseIf txtPassword.Text = Nothing Then
             MsgBox("Enter Password, To Continue")
-        End If
-        Dim getuser As String = txtUsername.Text
-        'This button will checks if user are authenticated or not
-
-        '-------------------------------xxXxx-------------------------------------
-        'admin_login
-        If (txtUsername.Text = "bhanu" And txtPassword.Text = "bhanu123") _
-           Or (txtUsername.Text = "deepak" And txtPassword.Text = "deepak123") _
-           Or (txtUsername.Text = "karthik" And txtPassword.Text = "karthik123") Then
-
-            'REDIRECT TO ADMIN PAGE
-            home_admin.Show()
-            MsgBox("Welcome back" & txtUsername.Text)
-            Me.Hide()
-
+            txtPassword.Focus()
         Else
 
-            conn.Open()
+            Dim getuser As String = txtUsername.Text
 
-            Dim cmd As New SqlCommand()
-            Dim da As New SqlDataAdapter()
-            Dim dset As New DataSet()
-            cmd.CommandText = "select * from ars_register where username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'"
-            cmd.Connection = conn
-            da.SelectCommand = cmd
-            da.Fill(dset, "ars_register")
-
-            If (dset.Tables("ars_register").Rows.Count > 0) Then
-                MsgBox("Login successful")
-                home_user.Show()
-                home_user.user_nick()
-                home_user.history()
-
-                Me.Hide()
-                conn.Close()
-            Else
-                MsgBox("Invalid details")
-                conn.Close()
+            'checking the admin details
+            If Not code.Text = Nothing Then
+                admin_user_login()
             End If
-            conn.Close()
+
+            Dim cmd1 As New SqlCommand
+
+            Try
+                Dim cmd As New SqlCommand()
+                Dim da As New SqlDataAdapter()
+                Dim dset As New DataSet()
+                cmd1.CommandText = " SELECT 
+                                                                                username, 
+                                                                                password
+
+                                                                FROM 
+                                                                                ars_register
+                                                        WHERE 
+                                                                               (username = '" + txtUsername.Text + "' ) AND (password = '" + txtPassword.Text + "') "
+                cmd1.Connection = conn
+
+                da.SelectCommand = cmd1
+                da.Fill(dset, "ars_register")
+
+                If (dset.Tables("ars_register").Rows.Count > 0) Then
+                    MsgBox("Login successful")
+                    home_user.Show()
+                    Me.Hide()
+                Else
+                    MsgBox("Invalid details")
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, "Error in login deatils")
+            Finally
+                conn.Close()
+            End Try
         End If
     End Sub
 
     Private Sub register_btn_Click(sender As Object, e As EventArgs) Handles register_btn.Click
-        If txt_user_name.Text = Nothing Then
-            username_Label.Visible = True
+        If txt_user_name.Text = "" Then
+            MessageBox.Show("Enter Username", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             txt_user_name.Focus()
 
-        ElseIf txt_nick_name.Text = Nothing Then
-            nickname_Label.Visible = True
+        ElseIf txt_nick_name.Text = "" Then
+            MessageBox.Show("Enter Nickname", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             txt_nick_name.Focus()
 
-        ElseIf txt_email.Text = Nothing Then
+        ElseIf txt_email.Text = "" Then
+            MessageBox.Show("Enter Email", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             email_Label.Visible = True
 
-        ElseIf txt_password.Text = Nothing Then
-            password_Label.Visible = True
+        ElseIf txt_password.Text = "" Then
+            MessageBox.Show("Enter Password", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
             txt_password.Focus()
 
-        ElseIf txt_confirm_password.Text = Nothing Then
-            confirm_password_Label.Visible = True
+        ElseIf txt_confirm_password.Text = "" Then
+            MessageBox.Show("Enter Confirm Password", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
             txt_confirm_password.Focus()
 
         ElseIf Not txt_password.Text = txt_confirm_password.Text Then
-            MsgBox("password And Confirm Pasword is not match", MsgBoxStyle.Critical)
+            MsgBox("password And Confirm Pasword do not match", MsgBoxStyle.Critical, "Warning")
 
+        Else
+
+            userexits()
+
+            Try
+                conn.Open()
+                Dim command As New SqlCommand("INSERT INTO  ars_register VALUES(          
+                                                                                                                '" + txt_user_name.Text + "',
+                                                                                                                '" + txt_nick_name.Text + "',
+                                                                                                                '" + txt_email.Text + "',
+                                                                                                                '" + txt_password.Text + "',
+                                                                                                               '" + txt_confirm_password.Text + "')", conn)
+
+                If command.ExecuteNonQuery() Then
+                    MsgBox("Your Account Created!", MsgBoxStyle.Information, "Success")
+
+                    'clearing all input textboxes and labels
+                    txt_password.Text = ""
+                    txt_user_name.Text = ""
+                    txt_confirm_password.Text = ""
+                    txt_email.Text = ""
+                    txt_nick_name.Text = ""
+
+                    'clearing all input labels
+                    username_Label.Visible = False
+                    nickname_Label.Visible = False
+                    email_Label.Visible = False
+                    password_Label.Visible = False
+                    confirm_password_Label.Visible = False
+
+                    'to navigate to login panel and close register panel
+                    login_Panel.Visible = True
+                    login_Panel.Enabled = True
+                    register_Panel.Visible = False
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show("Error while connecting to SQL Server." + ex.Message, "exception err")
+            Finally
+                conn.Close()
+            End Try
         End If
-        userexits()
-
-        Try
-            conn.Open()
-            Dim command As New SqlCommand("INSERT 
-                                                                                       INTO 
-                                                                          ars_register 
-                                                                                      VALUES('" + txt_user_name.Text + "','" + txt_nick_name.Text + "',
-                                                                                       '" + txt_email.Text + "',
-                                                                                       '" + txt_password.Text + "',
-                                                                                       '" + txt_confirm_password.Text + "')", conn)
-
-            If command.ExecuteNonQuery() Then
-                MsgBox("Your Account Created!", MsgBoxStyle.OkOnly, MsgBoxStyle.Information)
-
-                'clearing all input textboxes and labels
-                txt_password.Text = ""
-                txt_user_name.Text = ""
-                txt_confirm_password.Text = ""
-                txt_email.Text = ""
-                txt_nick_name.Text = ""
-
-                'clearing all input labels
-                username_Label.Visible = False
-                nickname_Label.Visible = False
-                email_Label.Visible = False
-                password_Label.Visible = False
-                confirm_password_Label.Visible = False
-
-                'to navigate to login panel and close register panel
-                login_Panel.Visible = True
-                login_Panel.Enabled = True
-                register_Panel.Visible = False
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Error while connecting to SQL Server." + ex.Message, "exception err")
-        Finally
-            conn.Close()
-        End Try
     End Sub
 
     Public Sub userexits()
+
         Dim cmd1 As New SqlCommand
 
         Dim Passowrd As String
@@ -200,7 +210,6 @@ Public Class Login_Page
                                                                                                         + txt_password.Text _
                    + "') "
             cmd1.Connection = conn
-            'change the data fields names and table according to your database
 
             Dim lrd As SqlDataReader = cmd1.ExecuteReader()
             If lrd.HasRows Then
@@ -214,21 +223,24 @@ Public Class Login_Page
 
                     If Passowrd = Passowrd2 And userName = txt_user_name.Text Then
 
-                        MsgBox("Your Account Created Successfully" & MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                        login_Panel.Show()
-                        login_Panel.Visible = True
-                        register_Panel.Enabled = False
+                        MsgBox("Username and Password already Exits." & MessageBoxButtons.OK, MessageBoxIcon.Exclamation, "Warning")
+                        txt_user_name.Text = ""
+                        txt_password.Text = ""
+                        txt_confirm_password.Text = ""
+                        txt_nick_name.Text = ""
+                        txt_email.Text = ""
 
                     End If
                 End While
             Else
-                MsgBox("Username and Password already Exits." & Environment.NewLine & "Authentication Failure", MsgBoxStyle.Exclamation)
-
+                MsgBox("Your Account Created Successfully " & Environment.NewLine & "", MsgBoxStyle.Information, "Success")
+                login_Panel.Show()
+                login_Panel.Visible = True
+                register_Panel.Enabled = False
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Error while connecting to SQL Server." + Environment.NewLine + "Error in login page" + Environment.NewLine + ex.Message, ex.Source)
+            MessageBox.Show("Error while connecting to SQL Server." + Environment.NewLine + "Error in login page" + Environment.NewLine + ex.Message)
             txtPassword.Text = Nothing
 
         Finally
@@ -236,10 +248,7 @@ Public Class Login_Page
 
             'Whether there is error or not. Close the connection.
             conn.Close()
-
         End Try
-
-
     End Sub
 
     Private Sub txt_user_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_user_name.KeyPress
@@ -291,15 +300,68 @@ Public Class Login_Page
                 End If
             End While
         End If
-
     End Sub
 
     Private Sub forgot_pass_Click(sender As Object, e As EventArgs) Handles forgot_pass.Click
-        feedback_form.Show()
-        feedback_form.abt_dev.Enabled = False
-        feedback_form.home_btn.Enabled = False
-        feedback_form.reservation.Enabled = False
-        feedback_form.can_ticket.Enabled = False
+        txtPassword.Text = Nothing
+        forgot.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub admin_user_login()
+        Dim cmd1 As New SqlCommand
+
+        Dim Passowrd As String
+        Dim Passowrd2 As String
+
+        Try
+            conn.ConnectionString = "Data Source=(localdb)\ProjectsV13;Initial Catalog=ARS;Integrated Security=True;"
+            conn.Open()
+
+            cmd1.CommandText = " SELECT 
+                                                                                username, 
+                                                                                password,
+                                                                                code
+
+                                                                FROM 
+                                                                                ars_admin
+                                                        WHERE 
+                                                                               (username = '" + txtUsername.Text + "' ) AND (password = '" + txtPassword.Text + "') AND (code = '" + code.Text + "' ) "
+            cmd1.Connection = conn
+
+            Dim lrd As SqlDataReader = cmd1.ExecuteReader()
+
+            Dim code_check As String
+            If lrd.HasRows Then
+                While lrd.Read()
+
+                    Passowrd = lrd("password").ToString()
+                    userName = lrd("username").ToString()
+                    code_check = lrd("code").ToString
+
+                    Passowrd2 = txtPassword.Text
+
+                    If Passowrd = Passowrd2 And userName = txtUsername.Text And code_check = code.Text Then
+                        MsgBox("Admin Login Sucessfull" & Environment.NewLine & "Information", MsgBoxStyle.Information)
+
+                        txtPassword.Text = Nothing
+
+                        'REDIRECT TO ADMIN PAGE
+                        code.Text = Nothing
+                        home_admin.load_date()
+                        home_admin.load_date_user()
+                        home_admin.Show()
+                        ' MsgBox("Welcome back " & txtUsername.Text)
+                        Me.Hide()
+
+                    End If
+                End While
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, "Error in login deatils")
+        Finally
+            conn.Close()
+        End Try
 
     End Sub
 End Class

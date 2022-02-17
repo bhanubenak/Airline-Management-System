@@ -27,13 +27,15 @@ Partial Class print_ticket
         Me.max_btn = New System.Windows.Forms.Button()
         Me.min_btn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtprint = New System.Windows.Forms.RichTextBox()
         Me.print_btn = New System.Windows.Forms.Button()
         Me.close_print_btn = New System.Windows.Forms.Button()
         Me.prndocPrintTicket = New System.Drawing.Printing.PrintDocument()
         Me.prndlgPrintTicket = New System.Windows.Forms.PrintDialog()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txtPrint = New System.Windows.Forms.RichTextBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'close_btn
@@ -83,15 +85,6 @@ Partial Class print_ticket
         Me.Panel1.Size = New System.Drawing.Size(1117, 44)
         Me.Panel1.TabIndex = 187
         '
-        'txtprint
-        '
-        Me.txtprint.Location = New System.Drawing.Point(94, 145)
-        Me.txtprint.Name = "txtprint"
-        Me.txtprint.ReadOnly = True
-        Me.txtprint.Size = New System.Drawing.Size(753, 616)
-        Me.txtprint.TabIndex = 188
-        Me.txtprint.Text = ""
-        '
         'print_btn
         '
         Me.print_btn.BackColor = System.Drawing.Color.IndianRed
@@ -102,7 +95,7 @@ Partial Class print_ticket
         Me.print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.print_btn.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.print_btn.ForeColor = System.Drawing.Color.Black
-        Me.print_btn.Location = New System.Drawing.Point(900, 528)
+        Me.print_btn.Location = New System.Drawing.Point(931, 555)
         Me.print_btn.Name = "print_btn"
         Me.print_btn.Size = New System.Drawing.Size(135, 38)
         Me.print_btn.TabIndex = 189
@@ -119,7 +112,7 @@ Partial Class print_ticket
         Me.close_print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.close_print_btn.Font = New System.Drawing.Font("Segoe UI", 12.25!, System.Drawing.FontStyle.Bold)
         Me.close_print_btn.ForeColor = System.Drawing.Color.Black
-        Me.close_print_btn.Location = New System.Drawing.Point(900, 589)
+        Me.close_print_btn.Location = New System.Drawing.Point(931, 619)
         Me.close_print_btn.Name = "close_print_btn"
         Me.close_print_btn.Size = New System.Drawing.Size(135, 38)
         Me.close_print_btn.TabIndex = 190
@@ -144,6 +137,25 @@ Partial Class print_ticket
         Me.RichTextBox1.TabIndex = 191
         Me.RichTextBox1.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Print Ticket"
         '
+        'txtPrint
+        '
+        Me.txtPrint.Location = New System.Drawing.Point(242, 181)
+        Me.txtPrint.Name = "txtPrint"
+        Me.txtPrint.Size = New System.Drawing.Size(653, 581)
+        Me.txtPrint.TabIndex = 195
+        Me.txtPrint.Text = ""
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(710, 181)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(185, 160)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 196
+        Me.PictureBox8.TabStop = False
+        '
         'print_ticket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -151,15 +163,17 @@ Partial Class print_ticket
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1117, 788)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.txtPrint)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.close_print_btn)
         Me.Controls.Add(Me.print_btn)
-        Me.Controls.Add(Me.txtprint)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "print_ticket"
         Me.Text = "print_ticket"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -168,10 +182,11 @@ Partial Class print_ticket
     Friend WithEvents max_btn As Button
     Friend WithEvents min_btn As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents txtprint As RichTextBox
     Friend WithEvents print_btn As Button
     Friend WithEvents close_print_btn As Button
     Friend WithEvents prndocPrintTicket As Printing.PrintDocument
     Friend WithEvents prndlgPrintTicket As PrintDialog
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents txtPrint As RichTextBox
+    Friend WithEvents PictureBox8 As PictureBox
 End Class

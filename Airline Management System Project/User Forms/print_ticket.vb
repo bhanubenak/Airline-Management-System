@@ -1,5 +1,4 @@
-﻿Imports System.Drawing.Printing
-Public Class print_ticket
+﻿Public Class print_ticket
     Private Sub print_ticket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         print_ticket()
     End Sub
@@ -26,10 +25,19 @@ Public Class print_ticket
 
 
     Public Sub print_ticket()
+
+        'Draw the image
+        'Dim image As PdfImage = PdfImage.FromFile("SalesReportChart.png")
+        'Dim width As Single = image.Width * 0.75F
+        'Dim height As Single = image.Height * 0.75F
+        'Dim x As Single = (page.Canvas.ClientSize.Width - width) / 2
+
+
         'print code
-        txtprint.BackColor = Color.WhiteSmoke
-        txtprint.Text = "                                                 INDIAN AIRWAYS                                "
-        txtprint.Text &= Chr(13) & "                                                    "
+        txtPrint.BackColor = Color.White
+
+        txtPrint.Text = "                                                 INDIAN AIRWAYS                                "
+        txtPrint.Text &= Chr(13) & "                                                    "
         txtprint.Text &= Chr(13) & "                                                     "
         txtprint.Text &= Chr(13) & "                                                    Passenger Ticket"
         txtprint.Text &= Chr(13) & "      ----------------------------------------------------------------------------------------------------------------"
@@ -45,6 +53,7 @@ Public Class print_ticket
         txtprint.Text &= Chr(13) & Chr(13) & "   Source Location : " & reservation_user.ComboBox1.Text
         txtprint.Text &= Chr(13) & Chr(13) & "   Destination Location : " & reservation_user.ComboBox2.Text
         txtprint.Text &= Chr(13) & "  ------------------------------WISH YOU HAPPY JOURNEY-------------------------------------------------------"
+
     End Sub
 
     Private Sub print_btn_Click(sender As Object, e As EventArgs) Handles print_btn.Click
@@ -54,7 +63,13 @@ Public Class print_ticket
             prndocPrintTicket.Print()
         End If
 
+        home_user.history()
         home_user.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub close_print_btn_Click(sender As Object, e As EventArgs) Handles close_print_btn.Click
+        home_user.history()
+        home_user.Show()
     End Sub
 End Class

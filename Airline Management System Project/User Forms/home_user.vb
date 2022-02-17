@@ -24,6 +24,7 @@ Public Class home_user
     End Sub
 
     Private Sub home_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        history()
 
         pnr_no.Text = Reserve_page.pnr_no_text.Text
 
@@ -132,5 +133,4 @@ Public Class home_user
             conn.Close()
         End Try
     End Sub
-
 End Class

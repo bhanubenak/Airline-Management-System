@@ -222,6 +222,7 @@ Public Class Cancel_flight_user
                 cancel_refund_text.Text = price
                 MsgBox("Your flight Cancelled Sucessfully" & Environment.NewLine & "Your refund amount: " & price)
                 refund_user.Show()
+                home_user.history()
                 Me.Hide()
             End If
 
@@ -274,6 +275,3 @@ Public Class Cancel_flight_user
         Me.Hide()
     End Sub
 End Class
-
-'' --> home user button & home user code in every Form
-'' --> Handling text values In right Format in every Form

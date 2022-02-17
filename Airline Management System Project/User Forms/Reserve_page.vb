@@ -1,5 +1,4 @@
-﻿Imports System.Drawing.Printing
-
+﻿
 Imports System.Data.SqlClient
 
 Public Class Reserve_page
@@ -9,6 +8,8 @@ Public Class Reserve_page
 
     'Load Event
     Private Sub Reserve_page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Flight_id.Text = reservation_user.fli_id_str.Text
+        MsgBox(Flight_id.Text)
         Panel2.Enabled = False
         date_now_label.Text = Date.Now.ToString("dd-MM-yyyy")
         time_now_label.Text = TimeOfDay
@@ -111,9 +112,8 @@ Public Class Reserve_page
 
         If user_id.Text = Nothing Then
             Label14.Visible = True
-            MsgBox("enter the " + pay_type_combo_box.SelectedItem.ToString() + " user-id", MsgBoxStyle.RetryCancel)
+            MsgBox("Enter the " + pay_type_combo_box.SelectedItem.ToString() + " user-id", MsgBoxStyle.RetryCancel)
             pay_type_combo_box.Focus()
-
         End If
 
         'GENERATING PNR NUMBER FOR PASSENGER
@@ -131,42 +131,7 @@ Public Class Reserve_page
             conn.Close()
         End If
 
-        Dim cmd_str As String = "INSERT INTO ars_reserve (
-                                                                            pnr_no, 
-                                                                            fname,
-                                                                           lname,
-                                                                           dob, 
-                                                                           age, 
-                                                                           gen, 
-                                                                           address, 
-                                                                           mobile, 
-                                                                           country, 
-                                                                           date_reserve, 
-                                                                           fli_name, 
-                                                                           source_reserve, 
-                                                                           destin_reserve, 
-                                                                           total_amt,
-                                                                           pay_type, 
-                                                                           user_id, 
-                                                                           username)
-                              VALUES (                                
-                                                                           @pnr_no, 
-                                                                           @fname, 
-                                                                           @lname, 
-                                                                           @dob, 
-                                                                           @age, 
-                                                                           @gen, 
-                                                                           @address, 
-                                                                           @mobile, 
-                                                                           @country, 
-                                                                           @date_reserve, 
-                                                                           @fli_name, 
-                                                                           @source_reserve, 
-                                                                           @destin_reserve, 
-                                                                           @total_amt, 
-                                                                           @pay_type, 
-                                                                           @user_id,
-                                                                           @username) "
+        Dim cmd_str As String = "INSERT INTO ars_reserve ( pnr_no,  fname,lname, dob,  age,  gen,   address, mobile,  country,  date_reserve,  flight_id,  fli_name,   source_reserve,   destin_reserve, class_type, total_amt,  pay_type, user_id,  username) VALUES (  @pnr_no,   @fname,    @lname,     @dob,  @age,    @gen,    @address,  @mobile,    @country,    @date_reserve,  @flight_id, @fli_name, @source_reserve, @destin_reserve, @class_type, @total_amt,  @pay_type,  @user_id,@username) "
 
         Using cmd As New SqlCommand()
             With cmd
@@ -202,8 +167,12 @@ Public Class Reserve_page
                 .Parameters.AddWithValue("@country", country_str)
 
                 Dim date_str As Date = reservation_user.DateTimePicker1.Value
-
                 .Parameters.AddWithValue("@date_reserve", date_str)
+
+                ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                .Parameters.AddWithValue("@flight_id", Flight_id.Text)
 
                 .Parameters.AddWithValue("@fli_name", reservation_user.fli_name.Text)
 
@@ -213,12 +182,18 @@ Public Class Reserve_page
                 Dim destin_str As String = reservation_user.ComboBox2.Text
                 .Parameters.AddWithValue("@destin_reserve", destin_str)
 
+
+                .Parameters.AddWithValue("@class_type", reservation_user.class_type.Text)
+
+
                 .Parameters.AddWithValue("@total_amt", reservation_user.price.Text)
+
                 Dim pay_type As String = pay_type_combo_box.SelectedItem.ToString()
 
                 .Parameters.AddWithValue("@pay_type", pay_type)
 
                 .Parameters.AddWithValue("@user_id", user_id.Text)
+
                 .Parameters.AddWithValue("@username", username_display.Text)
             End With
 
@@ -226,6 +201,7 @@ Public Class Reserve_page
                 conn.Open()
                 cmd.ExecuteNonQuery()
                 MsgBox("Ticket Confirmed!!" & Environment.NewLine & "Your PNR: " & RandomNumber)
+                home_user.history()
 
 
                 pnr_no_text.Visible = True

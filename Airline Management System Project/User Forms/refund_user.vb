@@ -1,8 +1,9 @@
-﻿Imports System.Drawing.Printing
-Public Class refund_user
+﻿Public Class refund_user
 
     Private Sub print_cancle_ticket_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        txtPrint.BackColor = Color.WhiteSmoke
+        txtPrint.BackColor = Color.White
+
+
         txtPrint.Text = "                                                 INDIAN AIRWAYS                                "
         txtPrint.Text &= Chr(13) & "                                                    "
         txtPrint.Text &= Chr(13) & "                                                     "
@@ -54,5 +55,9 @@ Public Class refund_user
 
     Private Sub min_btn_Click(sender As Object, e As EventArgs) Handles min_btn.Click
         WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub txtPrint_TextChanged(sender As Object, e As EventArgs) Handles txtPrint.TextChanged
+
     End Sub
 End Class
