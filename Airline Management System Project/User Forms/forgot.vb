@@ -119,12 +119,12 @@ Public Class forgot
         Dim Smtp_Server As New SmtpClient
         Dim e_mail As New MailMessage()
         Smtp_Server.UseDefaultCredentials = False
-        Smtp_Server.Credentials = New Net.NetworkCredential("airlineteam1311@gmail.com", "project@ars")
+        Smtp_Server.Credentials = New Net.NetworkCredential("enter mail id", "enter password")
         Smtp_Server.Port = 587
         Smtp_Server.EnableSsl = True
         Smtp_Server.Host = "smtp.gmail.com"
         e_mail = New MailMessage()
-        e_mail.From = New MailAddress("airlineteam1311@gmail.com")
+        e_mail.From = New MailAddress("Enter mail-id")
         e_mail.To.Add(emailid) ' ------------------------mail id getting-------------------
         e_mail.Subject = "Your Forget Password OTP"
         e_mail.IsBodyHtml = False
@@ -195,4 +195,3 @@ Public Class forgot
         End If
     End Sub
 End Class
-
